@@ -1,0 +1,29 @@
+﻿@model List<STUDENT_ENTRY_MVC.Models.Student>
+
+<center>
+    
+<h1> -- Here is the Students List -- </h1>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Degree</th>
+            <th>CGPA</th>
+            <th>Semester</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach(STUDENT_ENTRY_MVC.Models.Student s in Model )
+        {    
+            <tr>
+                <td>@s.Name</td>
+                <td>@s.Degree</td>
+                <td>@s.CGPA</td>
+                <td>@s.Semester</td>
+            </tr>
+        }
+    </tbody>
+</table>
+</center>

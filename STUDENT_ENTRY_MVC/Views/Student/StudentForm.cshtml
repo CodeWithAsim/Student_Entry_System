@@ -1,0 +1,31 @@
+﻿@using STUDENT_ENTRY_MVC.Models
+@model Student
+
+<html>
+    <head>
+        <title>Student Create And View</title>
+    </head>
+
+    <body>
+        <center>
+        <h1> -- ADD STUDENT DETAILS -- </h1>
+        <form method="post" action="/Student/StudentForm">
+
+            <label asp-for="Name">Name:</label><br/>
+            <input asp-for="Name" /><br />
+
+            <label asp-for="Degree">Degree:</label><br />
+            <input asp-for="Degree" /><br />
+
+            <label asp-for="CGPA">CGPA:</label><br />
+            <input asp-for="CGPA" /><br />
+                
+            <label asp-for="Semester">Semester:</label><br />
+            <input asp-for="Semester" /><br /><br/>
+
+            <input type="submit" value="Add Student" />
+
+        </form>
+        </center>
+    </body>
+</html>
