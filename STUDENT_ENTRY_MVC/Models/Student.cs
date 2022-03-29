@@ -11,10 +11,10 @@ namespace STUDENT_ENTRY_MVC.Models
         public string? Degree { get; set; }
         [Required(ErrorMessage = "Please enter the student's CGPA !")]
         [Range(1,4)]
-        public string? CGPA { get; set; }
+        public float? CGPA { get; set; }
         [Required(ErrorMessage = "Please enter the semester name !")]
         [Range(1, 8)]
-        public string? Semester { get; set; }
+        public int? Semester { get; set; }
 
     }
 
