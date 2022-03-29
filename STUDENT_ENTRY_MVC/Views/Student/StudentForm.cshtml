@@ -4,25 +4,39 @@
 <html>
     <head>
         <title>Student Create And View</title>
+        <link href="~/css/site.css" rel="stylesheet" />
     </head>
 
     <body>
         <center>
         <h1> -- ADD STUDENT DETAILS -- </h1>
+        <div asp-validation-summary="ModelOnly"></div>
         <form method="post" action="/Student/StudentForm">
 
+            <div>
             <label asp-for="Name">Name:</label><br/>
             <input asp-for="Name" /><br />
+            <span asp-validation-for="Name"></span>
+            </div>
 
+            <div>
             <label asp-for="Degree">Degree:</label><br />
             <input asp-for="Degree" /><br />
+            <span asp-validation-for="Degree"></span>
+            </div>
 
+            <div>
             <label asp-for="CGPA">CGPA:</label><br />
             <input asp-for="CGPA" /><br />
-                
-            <label asp-for="Semester">Semester:</label><br />
-            <input asp-for="Semester" /><br /><br/>
+            <span asp-validation-for="CGPA"></span>
+            </div>
 
+            <div>
+            <label asp-for="Semester">Semester:</label><br />
+            <input asp-for="Semester" /><br />
+            <span asp-validation-for="Semester"></span>
+            </div>
+            <br/>
             <input type="submit" value="Add Student" />
 
         </form>

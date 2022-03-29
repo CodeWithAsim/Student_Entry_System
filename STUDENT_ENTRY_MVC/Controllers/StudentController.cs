@@ -15,8 +15,17 @@ namespace STUDENT_ENTRY_MVC.Controllers
         [HttpPost]
         public ViewResult StudentForm(Student s)
         {
-            StudentCollection.AddStudent(s);
-            return View("StudentView",s);
+            if (ModelState.IsValid)
+            {
+                StudentCollection.AddStudent(s);
+                return View("StudentView", s);
+            }
+            else 
+            {
+                ModelState.AddModelError(String.Empty, "Please fullfill the requirements !");
+                return View();
+            }
+            
         }
         public ViewResult ShowAllStudents()
         {
