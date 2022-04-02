@@ -7,13 +7,14 @@
     
 <h4 class="bg-light"> Here is the Students List </h4>
 
-<table class="table table-hover table-striped table-bordered table-light">
+<table class="table table-hover table-striped table-light">
     <thead>
         <tr>
             <th>Name</th>
             <th>Degree</th>
             <th>CGPA</th>
             <th>Semester</th>
+            <th>Actions To Perform</th>
         </tr>
     </thead>
 
@@ -25,6 +26,11 @@
                 <td>@s.Degree</td>
                 <td>@s.CGPA</td>
                 <td>@s.Semester</td>
+                <td>
+                    <a class="btn btn-info " asp-action="Details" asp-route-id=@s.ID >Details</a>
+                    <a class="btn btn-warning " asp-action="Edit" asp-route-id=@s.ID >Edit</a>
+                    <a class="btn btn-danger " asp-action="Delete" asp-route-id=@s.ID >Delete</a>
+                </td>
             </tr>
         }
     </tbody>
